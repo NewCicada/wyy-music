@@ -2,12 +2,14 @@
   <div class="main-router-pages">
     <header-main v-if="!($route.path.indexOf('/login') != -1)"></header-main>
     <router-view class="router-page"></router-view>
+    <footer-main></footer-main>
   </div>
 </template>
 
 <script>
 import Login from './Login'
 import HeaderMain from './HeaderMain'
+import FooterMain from './FooterMain'
 // import FooterMain from './FooterMain'
 // import GoTop from './'
 export default {
@@ -16,6 +18,7 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Login,
     HeaderMain,
+    FooterMain,
   },
   data() {
     return {}
