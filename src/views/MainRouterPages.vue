@@ -3,6 +3,7 @@
     <header-main v-if="!($route.path.indexOf('/login') != -1)"></header-main>
     <router-view class="router-page"></router-view>
     <footer-main></footer-main>
+    <go-top></go-top>
   </div>
 </template>
 
@@ -10,8 +11,7 @@
 import Login from './Login'
 import HeaderMain from './HeaderMain'
 import FooterMain from './FooterMain'
-// import FooterMain from './FooterMain'
-// import GoTop from './'
+import GoTop from '../components/common/GoTop'
 export default {
   name: 'MainRouterPages',
   components: {
@@ -19,6 +19,7 @@ export default {
     Login,
     HeaderMain,
     FooterMain,
+    GoTop,
   },
   data() {
     return {}
