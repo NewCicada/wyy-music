@@ -4,6 +4,7 @@
     <router-view class="router-page"></router-view>
     <footer-main></footer-main>
     <go-top></go-top>
+    <play-bar v-if="Object.keys(currentSong).length !== 0"></play-bar>
   </div>
 </template>
 
@@ -12,6 +13,8 @@ import Login from './Login'
 import HeaderMain from './HeaderMain'
 import FooterMain from './FooterMain'
 import GoTop from '../components/common/GoTop'
+import PlayBar from '../components/playlistdetail/PlayBar'
+import { mapGetters } from 'vuex'
 export default {
   name: 'MainRouterPages',
   components: {
@@ -20,9 +23,13 @@ export default {
     HeaderMain,
     FooterMain,
     GoTop,
+    PlayBar,
   },
   data() {
     return {}
+  },
+  computed: {
+    ...mapGetters(['currentSong']),
   },
 }
 </script>
