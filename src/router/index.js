@@ -8,6 +8,7 @@ const Register = () => import('../views/Register')
 const Home = () => import('../views/Home')
 const Rank = () => import('../views/Rank')
 const SongSheet = () => import('../views/SongSheet')
+const Singer = () => import('../views/Singer')
 
 const routes = [
     {
@@ -33,6 +34,10 @@ const routes = [
     {
         path: '/song_sheet',
         component: SongSheet,
+    },
+    {
+        path: 'singer',
+        component: Singer,
     },
 ]
 const router = new VueRouter({
