@@ -1,6 +1,8 @@
+<!-- eslint-disable no-irregular-whitespace -->
 <template>
   <div class="banner">
-    <swiper :options="swiperOption" v-if="bannersInit">
+    <swiper :options="swiperOption" v-if="bannersInit"
+      >　　　　
       <swiper-slide v-for="banner in banners" :key="banner.imageUrl">
         <img v-lazy="banner.imageUrl" />
       </swiper-slide>
@@ -17,13 +19,13 @@ export default {
     return {
       banners: [],
       swiperOption: {
-        autoplay: 300, //轮播间隔时间
-        loop: true, //是否自动轮播
-        pagination: 'swiper-pagination', //轮播图中下标点
-        paginationClickable: true, //轮播图中下标点显示
-        slidesPerView: 3, //显示几张图片
-        spaceBetween: 30, //图片左右间距
-        slidesPerGroup: 3, //一次拖动几个
+        autoplay: 3000, // 轮播间隔时间
+        loop: true, // 是否自动轮播
+        pagination: '.swiper-pagination', //轮播图中下标点显示
+        paginationClickable: true, //轮播图中下标点显示,
+        slidesPerView: 3, // 显示几张图片
+        spaceBetween: 30, // 图片左右间距
+        slidesPerGroup: 3, // 一次拖动几个
         loopFillGroupWithBlank: true,
         centeredSlides: true,
         grabCursor: true,
@@ -41,8 +43,8 @@ export default {
   methods: {
     async _getBanner() {
       try {
-        let res = await this.$pai.getBanner()
-        if (res.status === 200 && res.statusText === 'Ok') {
+        let res = await this.$api.getBanner()
+        if (res.status === 200 && res.statusText === 'OK') {
           this.banners = res.data.banners
         }
       } catch (error) {
@@ -59,7 +61,7 @@ export default {
     width: 100%;
     padding: 20px 0 30px;
     .swiper-wrapper {
-      .swiper-slidee {
+      .swiper-slide {
         img {
           height: 136.5px;
           border-radius: 3px;
