@@ -5,6 +5,8 @@ Vue.use(VueRouter)
 
 const Login = () => import('../views/Login')
 const Register = () => import('../views/Register')
+const Home = () => import('../views/Home')
+const Rank = () => import('../views/Rank')
 
 const routes = [
     {
@@ -14,6 +16,18 @@ const routes = [
     {
         path: '/register',
         component: Register,
+    },
+    {
+        path: '/',
+        redirect: '/home',
+    },
+    {
+        path: '/home',
+        component: Home,
+    },
+    {
+        path: '/rank',
+        component: Rank,
     },
 ]
 const router = new VueRouter({
