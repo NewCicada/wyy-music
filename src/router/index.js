@@ -36,7 +36,7 @@ const routes = [
         component: SongSheet,
     },
     {
-        path: 'singer',
+        path: '/singer',
         component: Singer,
     },
 ]
