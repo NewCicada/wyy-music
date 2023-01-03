@@ -9,7 +9,7 @@
       <song-sheet-list :songSheetList="this.topList.slice(4)">
       </song-sheet-list>
     </div>
-    <isLoading v-if="isLoading"></isLoading>
+    <Loading v-if="isLoading"></Loading>
   </div>
 </template>
 

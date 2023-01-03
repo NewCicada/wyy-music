@@ -9,6 +9,7 @@ const Home = () => import('../views/Home')
 const Rank = () => import('../views/Rank')
 const SongSheet = () => import('../views/SongSheet')
 const Singer = () => import('../views/Singer')
+const Video = () => import('../views/Video')
 
 const routes = [
     {
@@ -38,6 +39,10 @@ const routes = [
     {
         path: '/singer',
         component: Singer,
+    },
+    {
+        path: '/video',
+        component: Video,
     },
 ]
 const router = new VueRouter({
