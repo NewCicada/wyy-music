@@ -14,6 +14,11 @@ const VideoDetail = () => import('../views/VideoDetail')
 const MV = () => import('../views/MV')
 const PlayListDetail = () => import('../views/PlayListDetail')
 const SingerDetail = () => import('../views/SingerDetail')
+const SingerMusic = () => import('../views/singer-detail/SingerMusic')
+const SingerAlbum = () => import('../views/singer-detail/SingerAlbum')
+const SingerMv = () => import('../views/singer-detail/SingerMv')
+const SingerDesc = () => import('../views/singer-detail/SingerDesc')
+const SimilarSinger = () => import('../views/singer-detail/SimilarSinger')
 
 const routes = [
     {
@@ -63,6 +68,17 @@ const routes = [
     {
         path: '/singer-detail/:id',
         redirect: '/singer-detail/:id/singer-music',
+    },
+    {
+        path: '/singer-detail/:id',
+        component: SingerDetail,
+        children: [
+            { path: 'singer-music', component: SingerMusic },
+            { path: 'singer-album', component: SingerAlbum },
+            { path: 'singer-mv', component: SingerMv },
+            { path: 'singer-desc', component: SingerDesc },
+            { path: 'similar-singer', component: SimilarSinger },
+        ],
     },
 ]
 const router = new VueRouter({
