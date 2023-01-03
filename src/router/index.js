@@ -10,6 +10,9 @@ const Rank = () => import('../views/Rank')
 const SongSheet = () => import('../views/SongSheet')
 const Singer = () => import('../views/Singer')
 const Video = () => import('../views/Video')
+const VideoDetail = () => import('../views/VideoDetail')
+const MV = () => import('../views/MV')
+const PlayListDetail = () => import('../views/PlayListDetail')
 
 const routes = [
     {
@@ -43,6 +46,18 @@ const routes = [
     {
         path: '/video',
         component: Video,
+    },
+    {
+        path: '/video-detail/:id',
+        component: VideoDetail,
+    },
+    {
+        path: '/mv',
+        component: MV,
+    },
+    {
+        path: '/play-list-detail/:id',
+        component: PlayListDetail,
     },
 ]
 const router = new VueRouter({
