@@ -13,6 +13,7 @@ const Video = () => import('../views/Video')
 const VideoDetail = () => import('../views/VideoDetail')
 const MV = () => import('../views/MV')
 const PlayListDetail = () => import('../views/PlayListDetail')
+const SingerDetail = () => import('../views/SingerDetail')
 
 const routes = [
     {
@@ -58,6 +59,10 @@ const routes = [
     {
         path: '/play-list-detail/:id',
         component: PlayListDetail,
+    },
+    {
+        path: '/singer-detail/:id',
+        redirect: '/singer-detail/:id/singer-music',
     },
 ]
 const router = new VueRouter({
