@@ -20,6 +20,10 @@ const SingerMv = () => import('../views/singer-detail/SingerMv')
 const SingerDesc = () => import('../views/singer-detail/SingerDesc')
 const SimilarSinger = () => import('../views/singer-detail/SimilarSinger')
 const MvDetail = () => import('../views/MvDetail')
+const Search = () => import('../views/Search')
+
+/* 用户登录 */
+const Profile = () => import('../views/Profile')
 
 const routes = [
     {
@@ -84,6 +88,10 @@ const routes = [
     {
         path: '/mv-detail/:id',
         component: MvDetail,
+    },
+    {
+        path: '/profile',
+        component: Profile,
     },
 ]
 const router = new VueRouter({
