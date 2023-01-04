@@ -19,6 +19,7 @@ const SingerAlbum = () => import('../views/singer-detail/SingerAlbum')
 const SingerMv = () => import('../views/singer-detail/SingerMv')
 const SingerDesc = () => import('../views/singer-detail/SingerDesc')
 const SimilarSinger = () => import('../views/singer-detail/SimilarSinger')
+const MvDetail = () => import('../views/MvDetail')
 
 const routes = [
     {
@@ -79,6 +80,10 @@ const routes = [
             { path: 'singer-desc', component: SingerDesc },
             { path: 'similar-singer', component: SimilarSinger },
         ],
+    },
+    {
+        path: '/mv-detail/:id',
+        component: MvDetail,
     },
 ]
 const router = new VueRouter({

@@ -6,7 +6,6 @@
 
 <script>
 import MainRouterPages from './views/MainRouterPages'
-
 export default {
   name: 'App',
   components: {
@@ -17,3 +16,4 @@ export default {
 
 <style lang="less">
 </style>
+
