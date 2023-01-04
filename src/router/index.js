@@ -21,6 +21,15 @@ const SingerDesc = () => import('../views/singer-detail/SingerDesc')
 const SimilarSinger = () => import('../views/singer-detail/SimilarSinger')
 const MvDetail = () => import('../views/MvDetail')
 const Search = () => import('../views/Search')
+const SearchSongs = () => import('../views/search/SearchSongs')
+const SearchSings = () => import('../views/search/SearchSings')
+const SearchAlbum = () => import('../views/search/SearchAlbum')
+const SearchVideo = () => import('../views/search/SearchVideo')
+const SearchPlayList = () => import('../views/search/SearchPlayList')
+const SearchUser = () => import('../views/search/SearchUser')
+const SearchMv = () => import('../views/search/SearchMv')
+const SearchRadioStation = () => import('../views/search/SearchRadioStation')
+const SearchComp = () => import('../views/search/SearchComp')
 
 /* 用户登录 */
 const Profile = () => import('../views/Profile')
@@ -92,6 +101,25 @@ const routes = [
     {
         path: '/profile',
         component: Profile,
+    },
+    {
+        path: '/search/:keywords',
+        redirect: '/search/:keywords/songs',
+    },
+    {
+        path: '/search/:keywords',
+        component: Search,
+        children: [
+            { path: 'songs', component: SearchSongs },
+            { path: 'sings', component: SearchSings },
+            { path: 'album', component: SearchAlbum },
+            { path: 'video', component: SearchVideo },
+            { path: 'play-list', component: SearchPlayList },
+            { path: 'user', component: SearchUser },
+            { path: 'mv', component: SearchMv },
+            { path: 'radio-station', component: SearchRadioStation },
+            { path: 'comp', component: SearchComp },
+        ],
     },
 ]
 const router = new VueRouter({

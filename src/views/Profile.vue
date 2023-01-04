@@ -106,6 +106,7 @@ import { mapGetters } from 'vuex'
 import SongSheetList from '../components/common/SongSheetList'
 import PlayList from '../components/playlistdetail/PlayList'
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Profile',
   components: {
     SongSheetList,
